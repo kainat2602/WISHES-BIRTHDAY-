@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Eshuuuu 💗</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #5c4050;
+
+    background:
+        radial-gradient(circle at 20% 20%, #fff1f7 0%, transparent 30%),
+        radial-gradient(circle at 80% 20%, #eee5ff 0%, transparent 30%),
+        linear-gradient(135deg, #ffdbea, #e8ddff, #def5ff);
+}
+
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(.96);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    z-index: 10;
+}
+
+.screen.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: scale(1);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.small-text {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+    opacity: .75;
+}
+
+h1 {
+    font-size: clamp(42px, 10vw, 78px);
+
+    color: #c25482;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 5px 20px rgba(194,84,130,.2);
+}
+
+h2 {
+    font-size: clamp(28px, 7vw, 45px);
+
+    color: #825b9b;
+
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 620px;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.next-btn {
+
+    margin-top: 30px;
+
+    padding: 15px 32px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #bb5985;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(170,70,110,.25);
+
+    transition: .3s;
+}
+
+.next-btn:hover {
+
+    transform: translateY(-3px) scale(1.05);
+
+    box-shadow:
+        0 15px 35px rgba(170,70,110,.35);
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.moon {
+
+    font-size: 65px;
+
+    margin-bottom: 20px;
+
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+
+    from {
+        transform: scale(1);
+        opacity: .8;
+    }
+
+    to {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.big-heart {
+
+    font-size: 80px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+
+    font-size: 100px;
+
+    margin: 15px 0;
+
+    animation: cakeBounce 1.4s infinite alternate;
+}
+
+@keyframes cakeBounce {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-wrapper {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.letter {
+
+    width: min(650px, 92vw);
+
+    max-height: 58vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.62);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(80,50,90,.15);
+
+    border:
+        1px solid rgba(255,255,255,.7);
+
+    line-height: 1.9;
+
+    font-size: 17px;
+
+    text-align: center;
+}
+
+.letter p {
+
+    margin: 0 auto 18px;
+
+    font-size: 17px;
+}
+
+.highlight {
+
+    color: #b34f79;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CANDLE
+========================= */
+
+.candle {
+
+    font-size: 85px;
+
+    margin: 25px;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+    animation: candleGlow 1.5s infinite alternate;
+}
+
+.candle:hover {
+
+    transform: scale(1.15);
+}
+
+@keyframes candleGlow {
+
+    from {
+        filter: drop-shadow(
+            0 0 5px #ffb4cf
+        );
+    }
+
+    to {
+        filter: drop-shadow(
+            0 0 20px #ff91b9
+        );
+    }
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn {
+
+    position: fixed;
+
+    top: 18px;
+    right: 18px;
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,.75);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.12);
+
+    z-index: 200;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart {
+
+    position: fixed;
+
+    bottom: -40px;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+    animation:
+        floatUp linear forwards;
+}
+
+@keyframes floatUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .9;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+.firework {
+
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    pointer-events: none;
+
+    font-size: 22px;
+
+    z-index: 100;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-heart {
+
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: heartbeat 1.2s infinite;
+}
+
+.final-text {
+
+    font-size: 20px;
+
+    line-height: 2;
+
+    max-width: 600px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .screen {
+
+        padding:
+            20px 16px;
+    }
+
+    p {
+
+        font-size: 16px;
+    }
+
+    .letter {
+
+        max-height: 52vh;
+
+        padding:
+            22px 18px;
+
+        font-size: 15px;
+    }
+
+    .letter p {
+
+        font-size: 15px;
+    }
+
+    .cake {
+
+        font-size: 80px;
+    }
+
+    .big-heart {
+
+        font-size: 65px;
+    }
+
+    .candle {
+
+        font-size: 70px;
+    }
+
+    .next-btn {
+
+        font-size: 15px;
+
+        padding:
+            13px 25px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<button
+    class="music-btn"
+    id="musicBtn"
+    onclick="toggleMusic()">
+
+    🎵
+
+</button>
+
+<audio id="music" loop>
+
+    <source
+        src="friendship.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- =========================
+     SCREEN 1
+========================= -->
+
+<section
+    class="screen active"
+    id="screen1">
+
+    <div class="moon">
+        🌙✨
+    </div>
+
+    <p class="small-text">
+        A LITTLE SURPRISE
+    </p>
+
+    <h1>
+        Hey Esha...
+    </h1>
+
+    <p>
+        I made something especially for you. 🎀
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextScreen(2)">
+
+        Tap to continue 💗
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 2
+========================= -->
+
+<section
+    class="screen"
+    id="screen2">
+
+    <div class="big-heart">
+        💗
+    </div>
+
+    <h2>
+        Are you ready?
+    </h2>
+
+    <p>
+        Because this little surprise
+        is only for you. 🥹
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextScreen(3)">
+
+        Open it 🎀
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 3
+========================= -->
+
+<section
+    class="screen"
+    id="screen3">
+
+    <p class="small-text">
+        TODAY IS YOUR DAY
+    </p>
+
+    <h1>
+        Happy Birthday
+    </h1>
+
+    <h2>
+        My Eshuuuu 💗
+    </h2>
+
+    <div class="cake">
+        🎂
+    </div>
+
+    <button
+        class="next-btn"
+        onclick="nextScreen(4)">
+
+        There's more... 💌
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 4
+========================= -->
+
+<section
+    class="screen"
+    id="screen4">
+
+    <div class="big-heart">
+        🥹💗
+    </div>
+
+    <h2>
+        5 Years of Us
+    </h2>
+
+    <p>
+        Five years of friendship,
+        memories, laughter
+        and chaos. 🫶🏻
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextScreen(5)">
+
+        Read your letter 💌
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 5
+========================= -->
+
+<section
+    class="screen"
+    id="screen5">
+
+    <h2>
+        A Letter For Esha 💌
+    </h2>
+
+    <div class="letter-wrapper">
+
+        <div class="letter">
+
+            <p>
+                Five years ago,
+                I honestly thought...
+            </p>
+
+            <p>
+                <span class="highlight">
+                    "I might actually kill this girl." 😭😂
+                </span>
+            </p>
+
+            <p>
+                Little did I know that
+                the girl I found so annoying
+                would become one of the most
+                precious people in my life. 🥹
+            </p>
+
+            <p>
+                Five years of laughter,
+                stupid fights,
+                crazy moments,
+                endless conversations,
+                and memories I'll always treasure. 🌸
+            </p>
+
+            <p>
+                But if there is one thing
+                I've always admired about you,
+                it is your
+                <span class="highlight">
+                    loyalty. 🫶🏻
+                </span>
+            </p>
+
+            <p>
+                Thank you for being there,
+                for listening,
+                for understanding,
+                and simply for being YOU.
+            </p>
+
+            <p>
+                From
+                <em>"I wanted to kill her"</em>
+                😂
+                to
+                <em>
+                    "I can't imagine my life without her."
+                </em>
+                🥹
+            </p>
+
+            <p>
+                Honestly...
+                what a plot twist. 🎀
+            </p>
+
+            <p>
+                May this new chapter of your life
+                bring you happiness,
+                peace, success,
+                love and everything
+                your heart wishes for. ✨
+            </p>
+
+            <p>
+                No matter how much life changes,
+                I hope we always remain
+                <span class="highlight">
+                    "US." 💗
+                </span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <button
+        class="next-btn"
+        onclick="nextScreen(6)">
+
+        One last thing... 🕯️
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 6
+========================= -->
+
+<section
+    class="screen"
+    id="screen6">
+
+    <h2>
+        Make A Wish 🕯️
+    </h2>
+
+    <p>
+        Close your eyes...
+        <br>
+        Think of your biggest wish.
+        <br>
+        Then tap the candle. ✨
+    </p>
+
+    <div
+        class="candle"
+        id="candle"
+        onclick="makeWish()">
+
+        🕯️
+
+    </div>
+
+    <p id="wishText">
+        Your wish is waiting... 💗
+    </p>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 7
+========================= -->
+
+<section
+    class="screen"
+    id="screen7">
+
+    <div class="big-heart">
+        🎆
+    </div>
+
+    <h1>
+        Wish Made!
+    </h1>
+
+    <p>
+        May every beautiful wish
+        you make find its way to you. ✨
+    </p>
+
+    <button
+        class="next-btn"
+        onclick="nextScreen(8)">
+
+        One more thing... 🎵
+
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SCREEN 8
+========================= -->
+
+<section
+    class="screen"
+    id="screen8">
+
+    <div class="final-heart">
+        💗
+    </div>
+
+    <h2>
+        Happy Birthday, Esha
+    </h2>
+
+    <div class="final-text">
+
+        <p>
+            Five years down...
+        </p>
+
+        <p>
+            Hopefully,
+            <strong>
+                forever to go. 🫂
+            </strong>
+        </p>
+
+        <br>
+
+        <p>
+            Stay crazy.
+            Stay beautiful.
+            Stay YOU. 🎀
+        </p>
+
+        <br>
+
+        <p>
+            Love you always,
+            <br>
+            <strong>
+                My Eshuuuu 💗
+            </strong>
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =========================
+   SCREEN CHANGE
+========================= */
+
+function nextScreen(number) {
+
+    const current =
+        document.querySelector(".screen.active");
+
+    const next =
+        document.getElementById(
+            "screen" + number
+        );
+
+    current.classList.remove("active");
+
+    setTimeout(() => {
+
+        next.classList.add("active");
+
+    }, 100);
+
+}
+
+
+
+/* =========================
+   MUSIC
+========================= */
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById("music");
+
+    const button =
+        document.getElementById("musicBtn");
+
+    if (music.paused) {
+
+        music.play();
+
+        button.innerHTML = "🔊";
+
+    } else {
+
+        music.pause();
+
+        button.innerHTML = "🎵";
+
+    }
+
+}
+
+
+
+/* =========================
+   CANDLE
+========================= */
+
+function makeWish() {
+
+    const candle =
+        document.getElementById("candle");
+
+    const text =
+        document.getElementById("wishText");
+
+    candle.innerHTML = "💨";
+
+    text.innerHTML =
+        "Wish made... ✨ May it come true, Eshuuuu! 💗";
+
+    createFireworks();
+
+    setTimeout(() => {
+
+        nextScreen(7);
+
+    }, 2500);
+
+}
+
+
+
+/* =========================
+   FIREWORKS
+========================= */
+
+function createFireworks() {
+
+    for (
+        let i = 0;
+        i < 70;
+        i++
+    ) {
+
+        const spark =
+            document.createElement("div");
+
+        spark.className =
+            "firework";
+
+        spark.innerHTML =
+            [
+                "✨",
+                "💗",
+                "💕",
+                "⭐",
+                "🌸"
+            ][
+                Math.floor(
+                    Math.random() * 5
+                )
+            ];
+
+        const angle =
+            Math.random() *
+            Math.PI * 2;
+
+        const distance =
+            100 +
+            Math.random() * 300;
+
+        const x =
+            Math.cos(angle) *
+            distance;
+
+        const y =
+            Math.sin(angle) *
+            distance;
+
+        document.body.appendChild(
+            spark
+        );
+
+        const animation =
+            spark.animate(
+
+                [
+                    {
+                        transform:
+                            "translate(-50%,-50%) scale(1)",
+                        opacity: 1
+                    },
+
+                    {
+                        transform:
+                            `translate(
+                                calc(-50% + ${x}px),
+                                calc(-50% + ${y}px)
+                            )
+                            scale(.2)`,
+                        opacity: 0
+                    }
+                ],
+
+                {
+                    duration:
+                        1200 +
+                        Math.random() * 900,
+
+                    easing: "ease-out"
+                }
+            );
+
+        animation.onfinish =
+            () => spark.remove();
+
+    }
+
+}
+
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+const heartList = [
+    "💗",
+    "💕",
+    "💖",
+    "✨",
+    "🌸",
+    "🎀"
+];
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    heart.innerHTML =
+        heartList[
+            Math.floor(
+                Math.random() *
+                heartList.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 +
+        "vw";
+
+    heart.style.fontSize =
+        15 +
+        Math.random() * 18 +
+        "px";
+
+    heart.style.animationDuration =
+        5 +
+        Math.random() * 5 +
+        "s";
+
+    document.body.appendChild(
+        heart
+    );
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 10000);
+
+}
+
+setInterval(
+    createHeart,
+    600
+);
+
+</script>
+
+</body>
+</html>
